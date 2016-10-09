@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Perfil</title>
+ <link rel="stylesheet" href="css/side-menu.css">
+        <link rel="stylesheet" href="css/pure-min.css">
+        
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        
+        <script src="js/jquery-1.11.3.min.js"></script>
+         <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="cordova.js"></script>
+        <script src="js/managerDB.js"></script>
+	   <script>
+$(document).ready(function(){
+    $("#txtPassword1").keyup(function(){
+		
+		if ($("#txtPassword1").val()!=$("#txtPassword").val()){	
+		$("#alerta").css("color", "#F30");
+		$("#alerta").text("Las contraseñas no coinciden");
+		}
+		else
+		{
+		$("#alerta").text("");
+		}
+    });
+	});
+	
+	$(document).ready(function(){
+	$("#txtPassword1").focusout(function(){
+		if ($("#txtPassword1").val()!=$("#txtPassword").val()){	$("#alerta").css("color", "#F30");
+		$("#alerta").text("Las contraseñas no coinciden, escriba de nuevo");
+		$("#txtPassword1").val("");
+		$("#txtPassword").val("");
+		}
+      });
+	  });
+	  
+	  $(document).ready(function(){
+	  $("#btnInsert").click(function(){
+		if ($("input").val()!=""){
+			alert("Completos");
+			goInsert(); }
+	  });
+	   });
+
+</script>
+</head>
+
+<body>
+<div data-role="page">
+  <div data-role="header">
+  <h1>Perfil de usuario</h1>
+  </div>
+
+   <div data-role="main" class="ui-content">
+    <form method="post" action="#">
+      <!--<div class="ui-field-contain">-->
+        <label for="txtNombre">Nombre completo:</label>
+        <input name="txtNombre" type="text" required id="txtNombre" placeholder="Nombre (s) apellidos">
+        <label for="txtEdad">Edad:</label>
+        <input name="txtEdad" type="number" required id="txtEdad" placeholder="Edad" pattern="[1-9]{2}" min="18" max="90">
+        <label for="txtEmail">Dirección de correo:</label>
+        <input name="txtEmail" type="email" required id="txtEmail" placeholder="Correo electrónico">
+        <label for="txtTerapeuta">Nombre completo del terapeuta:</label>
+        <input name="txtTerapeuta" type="text" required id="txtTerapeuta" placeholder="Nombre (s) apellidos">
+        <label for="txtEmailT">Dirección de correo del terapeuta:</label>
+        <input type="email" name="txtEmailT" id="txtEmailT" placeholder="Correo electrónico" >
+        <label for="txtPassword">Contraseña personal:</label>
+        <input type="password" name="txtPassword" id="txtPassword" placeholder="Contraseña" required>
+        
+        <label for="txtPassword1">Confirmar contraseña:</label>
+        <input type="password" name="txtPassword1" id="txtPassword1" placeholder="Repetir la contraseña" required>
+        <p id="alerta"></p>
+      </div>
+      <div data-role="navbar">
+      <ul>
+        <li><button data-inline="true" data-icon="plus" id="btnInsert" name="btnInsert">Agregar</button></li>
+               
+      </ul>
+    </div>
+<!--   <img id="btnInsert" name="btnInsert" src="img/guardar.png">-->
+    </form>
+  
+<!--  </div>-->
+
+</div>
+<script src="js/ui.js"></script>
+</body>
+</html>

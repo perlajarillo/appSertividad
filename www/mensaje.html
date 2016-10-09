@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Mensaje</title>
+ <link rel="stylesheet" href="css/side-menu.css">
+        <link rel="stylesheet" href="css/pure-min.css">
+        
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        
+        <script src="js/jquery-1.11.3.min.js"></script>
+         <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="cordova.js"></script>
+        <script src="js/managerDB.js"></script>
+        
+		<script language="javascript" type="text/javascript">
+		
+		function formar(){
+		alert("entra");
+		/*var mensajeFormado=document.getElementById("mensaje");
+		mensajeFormado=mensajeFormado.concat(texto);
+		document.getElementById("mensaje").innerHTML=mensajeFormado;*/
+		}
+		</script>
+        
+</head>
+
+<body>
+<div data-role="page">
+  <div data-role="header">
+  <p>Construir mensaje asertivo</p>
+  </div>
+
+  <div data-role="main" class="ui-content">
+  
+    <div data-role="main" class="ui-content">
+    <div data-role="collapsibleset">
+      <div data-role="collapsible">
+        <h3>Situación</h3>
+        <form method="post" action="#" >
+      <!--<div class="ui-field-contain">-->
+        <label for="situacion">¿Qué pasó?:</label>
+        <textarea name="situacion" required id="situacion" placeholder="Describe" onClick="formar()" ></textarea>
+         <label for="quien">¿Quién?:</label>
+         <select id="quien" required placeholder="Elije de la lista">
+         <option value="Padre">Padre</option>
+         <option value="Madre">Madre</option>
+         <option value="Amigo">Amigo</option>
+         <option value="Amiga">Amiga</option>
+         <option value="Pareja">Pareja: Novio(a)</option>
+         <option value="Compañero de trabajo">Compañero de trabajo</option>
+         <option value="Jefe">Jefe</option>
+         <option value="Maestro">Maestro(a)</option>
+         <option value="Compañero de escuela">Compañero de escuela</option>
+         <option value="Vecino">Vecino(a)</option>
+         <option value="Hijo">Hijo</option>
+         <option value="Hija">Hija</option>
+         <option value="Desconocido">Persona desconocida</option>
+         </select>
+         <label for="cuando">¿Cuándo?:</label>
+         <input type="date" required id="cuando" placeholder="Fecha">
+       	 <label for="donde">¿En dónde?:</label>
+         <select id="donde">
+         <option value="Casa">Casa</option>
+         <option value="Trabajo">Trabajo</option>
+         <option value="Escuela">Escuela</option>
+         <option value="Lugar público">Lugar público</option>
+         <option value="Otro">Otro: <input type="text"id="otro"></option>
+         </select>
+</form>
+      </div>
+      <div data-role="collapsible">
+        <h3>Emoción</h3>
+        <p>Aquí van las emociones</p>
+      </div>
+      <div data-role="collapsible">
+        <h3>Posibles consecuencias</h3>
+        <label for="consecuencias">Consecuencias:</label>
+        <textarea name="consecuencias" id="consecuencias" placeholder="¿Qué sucederá si pasa otra vez?"></textarea>
+      </div>
+      <div data-role="collapsible">
+        <h3>Propuesta de solución</h3>
+        <label for="solucion">Solución:</label>
+        <textarea name="solucion" id="solucion" placeholder="¿Qué propones para solucionar la situación?" ></textarea>
+      </div>
+    </div>
+  </div>
+            
+        
+         
+      
+     <!-- </div>-->
+       <label for="mensaje">Mensaje:</label>
+        <textarea name="mensaje" id="mensaje" placeholder="Mensaje construido"></textarea>
+      </div>
+      <div data-role="navbar">
+      <ul>
+        <li><button data-inline="true" data-icon="plus" id="btnGuardar" name="btnGuardar">Guardar mensaje</button></li>
+               
+      </ul>
+    </div>
+        </form>
+    <p></p>
+  </div>
+
+<script src="js/ui.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="utf-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        
+        <title>AppSertividad</title>
+         <link rel="stylesheet" href="css/side-menu.css">
+        <link rel="stylesheet" href="css/pure-min.css">
+        
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        
+        <script src="js/jquery-1.11.3.min.js"></script>
+	    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+        <script src="cordova.js"></script>
+    </head>
+    <body>
+
+            <div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!--  icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu">
+            <a class="pure-menu-heading" href="index.html">AppSertividad 1.0.</a>
+
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="perfil.html" target="contenido" class="pure-menu-link">Perfil</a></li>
+                <li class="pure-menu-item"><a href="mensaje.html"  target="contenido" class="pure-menu-link">Construir mensaje</a></li>
+				<li class="pure-menu-item"><a href="" class="pure-menu-link">Histórico de mensajes</a></li>
+                <li class="pure-menu-item" class="menu-item-divided pure-menu-selected">
+                    <a href="acercaDe.html" target="contenido" class="pure-menu-link">Acerca de...</a>
+                </li>
+
+                
+            </ul>
+        </div>
+    </div>
+    
+    <!--Aquí inicia el contenido de la app -->
+  
+  
+
+  <div data-role="main" class="ui-content">
+<iframe id="contenido" name="contenido" frameborder="0" src="bienvenida.html" height="540" width="350" scrolling="auto" marginwidth="0">
+ </iframe>
+  </div>
+
+  <div data-role="footer">
+    Aplicación realizada por Perla Jarillo
+  </div>
+       <script src="js/ui.js"></script>
+
+    </body>
+</html>
