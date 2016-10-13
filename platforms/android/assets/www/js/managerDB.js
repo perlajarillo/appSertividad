@@ -1,6 +1,6 @@
-// JavaScript Document
+// managerDB
 
-// Wait for Cordova to load
+// Se espera a que Cordova cargue
 
 document.addEventListener("deviceready", onDeviceReady, false);
 

@@ -12,17 +12,16 @@
          <script src="js/jquery.mobile-1.4.5.min.js"></script>
         <script src="cordova.js"></script>
         <script src="js/managerDB.js"></script>
-  <script>
-
-$(document).ready(function(){
-    $(".emocion").click(function(){
+        
+		<script language="javascript" type="text/javascript">
 		
-			$("#emociones:not(:contains("+$(this).val()+"))").text($(this).val()+", "+$("#emociones").text());
-
-			
-			});
-			});
-		</script>      	
+		function formar(){
+		alert("entra");
+		/*var mensajeFormado=document.getElementById("mensaje");
+		mensajeFormado=mensajeFormado.concat(texto);
+		document.getElementById("mensaje").innerHTML=mensajeFormado;*/
+		}
+		</script>
         
 </head>
 
@@ -74,12 +73,12 @@ $(document).ready(function(){
       </div>
       <div data-role="collapsible">
         <h3>Emoción</h3>
-        <p id="emociones"></p>      
-<button id="btnTriste" name="btnTriste" style="text-align:left" value="Triste" class="emocion"><img src="img/triste.png" onClick="">Triste</button>
-  <button id="btnConfundido" name="btnConfundido" style="text-align:left" class="emocion" value="Confundido"><img src="img/confundido.png" onClick="">Confundido</button>          
-   <button id="btnEnojado" name="btnEnojado" style="text-align:left" class="emocion" value="Enojado"><img src="img/enojado1.png"  onClick="">Enojado</button> 
-    <button id="btnFeliz" class="emocion"  name="btnFeliz" value="Feliz" style="text-align:left"><img src="img/feliz.png" onClick="">Feliz</button> 
-        
+        <p id="sentimientos"></p>      
+<button id="btnTriste" name="btnTriste" style="text-align:left"><img src="img/triste.png" onClick="">Triste</button>
+  <button id="btnConfundido" name="btnConfundido" style="text-align:left"><img src="img/confundido.png" onClick="">Confundido</button>          
+   <button id="btnEnojado" name="btnEnojado" style="text-align:left"><img src="img/enojado1.png" onClick="" >Enojado</button> 
+    <button id="btnFeliz" name="btnFeliz" style="text-align:left"><img src="img/feliz.png" onClick="">Feliz</button> 
+        <p>Aquí van las emociones</p>
       </div>
       <div data-role="collapsible">
         <h3>Posibles consecuencias</h3>
